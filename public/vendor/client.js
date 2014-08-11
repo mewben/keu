@@ -1,7 +1,7 @@
 (function($, window, undefined) {
 	$(document).ready(function() {
 		//var socket = io.connect('http://192.168.0.200:3700');
-		var socket = io.connect('http://localhost:3700');
+		var socket = io.connect('http://192.168.1.4:3700');
 		var cid = null;
 		var clientserving = $('#clientserving');
 

@@ -1,6 +1,6 @@
 (function($, window, undefined) {
 	//var socket = io.connect('http://192.168.0.200:3700');
-	var socket = io.connect('http://localhost:3700');
+	var socket = io.connect('http://192.168.1.4:3700');
 
 	$(document).ready(function() {
 		var template = Handlebars.compile($('#template').html());
