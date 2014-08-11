@@ -1,0 +1,277 @@
+@font-face {
+  font-family: 'RalewayLight';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Raleway-Light '), local('RalewayLight'), url('fonts/raleway/Raleway-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RalewayBold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Raleway-Bold '), local('RalewayBold'), url('fonts/raleway/Raleway-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RalewayExtraBold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Raleway-ExtraBold '), local('RalewayBold'), url('fonts/raleway/Raleway-ExtraBold.ttf') format('truetype');
+}
+
+body {
+	font-family: 'RalewayLight', Arial;
+	color:#fff;
+	line-height: 1em;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+ul#servinglist {
+	list-style:none;
+	margin-left:0;
+}
+ul#servinglist li {
+	margin-bottom: 15px;
+}
+.default {
+	background-color: rgba(0,0,0, 0.8);
+	display:block;
+	padding: 20px;
+	border-radius: 0 10px 10px 0;
+}
+
+#foot {
+	position: absolute;
+	bottom: 0;
+	background-color: #000;
+	display: block;
+	width:100%;
+}
+#logo {
+	position: absolute;;
+	bottom: 0;
+	right:0;
+}
+#announcements {width:100%; overflow: hidden;}
+/*#announcements p.marquee {
+	position:relative;
+	overflow:hidden;
+	float:left;
+	line-height: 1em;
+	font-size:50px;
+	text-transform: uppercase;
+}
+p.marquee {
+	overflow: hidden;
+	white-space: nowrap;
+	box-sizing: border-box;
+	background-color: red;
+	animation: marquee 5s linear infinite;
+	-moz-animation: marquee 5s linear infinite;
+	-webkit-animation: marquee 5s linear infinite;
+
+} */
+.default .text-right {
+	font-family: 'RalewayBold', Arial;
+	font-size: 100px;
+	line-height: 1em;
+}
+.default .text-center {font-size:25px;}
+.no {
+	font-size:80px;
+	line-height: 1em;
+}
+#date {
+	font-size:40px;
+	line-height: 1em;
+}
+#time {
+	font-size: 80px;
+	line-height: 1em;
+}
+
+.marquee {
+	width: 100%;
+	overflow: hidden;
+	font-size: 65px;
+	text-transform: uppercase;
+	line-height:1em;
+	padding-top:10px;
+	white-space: nowrap;
+}
+
+/*
+
+.wrapper {
+	width:500px; 
+	border:1px solid #aaa; 
+	margin:0 auto; 
+	overflow:hidden; 
+	border-radius:8px;
+}
+*/
+/*
+.marquee{
+	position:relative;
+	overflow:hidden;
+	float:left;
+	padding-top:15px;
+}
+.marquee span{
+	font-size: 65px;
+	text-transform: uppercase;
+	line-height:1em;
+	padding-left:10px;
+	white-space: nowrap;
+	display:inline;
+	position: relative;
+	left:0%;
+	-moz-animation: marquee 100s infinite linear;
+	-webkit-animation: marquee 100s infinite linear;
+}
+.marquee:hover span{
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+}
+.marquee span:after {
+	content:attr(rel); 
+	display:inline; 
+	padding-left:10px;
+}
+*/
+
+#video {
+	display: block;
+	text-align:center;
+	margin-top: 80px;
+}
+video {
+	width: 1180px;
+	height:660;
+}
+#alert {
+	position: absolute;
+	top:50%;
+	left:0;
+	margin-top: -350px;
+	background-color: rgba(255,255,255, 0.9);
+	width:100%;
+	text-align: center;
+	color:#000;
+	font-size: 50px;
+	line-height: 1em;
+	padding:0;
+/*	-moz-animation: blinkbg 2s infinite linear;
+	-webkit-animation: blinkbg 2s infinite linear;*/
+}
+#nowserving {
+	font-family: 'RalewayBold', Arial;
+	font-size:500px;
+	line-height: 1.5em;
+	text-decoration: blink;
+}
+#clientno {
+	font-family: 'RalewayBold', Arial;
+	font-size:300px;
+	line-height: 1em;
+}
+
+@-webkit-keyframes marquee{
+	0% {left: 0%;}
+	100% {left: -50%;}
+}
+
+@-moz-keyframes marquee{
+	0% {left: 0%;}
+	100% {left: -50%;}
+}
+@-webkit-keyframes blinkbg{
+	0% {background-color: rgba(255, 255, 255, 0.8);}
+	50% {background-color: rgba(244, 155, 0, 0.8);}
+	100% {background-color: rgba(255, 255, 255, 0.8);}
+}
+@-moz-keyframes blinkbg{
+	0% {background-color: rgba(255, 255, 255, 0.8);}
+	50% {background-color: rgba(244, 155, 0, 0.8);}
+	100% {background-color: rgba(255, 255, 255, 0.8);}
+}
+@-webkit-keyframes blink {
+	from {opacity: 1.0;}
+	to {opacity: 0.0;}
+}
+@-moz-keyframes blink {
+	from {opacity: 1.0;}
+	to {opacity: 0.0;}
+}
+
+/*** CLIENT ***/
+.prompt {
+	font-size:3em;
+	line-height: 1em;
+}
+#cid {
+	background-color: rgba(255,255,255,0.8);
+	font-size: 9em;
+	line-height: 1em;
+	padding: 10px 0;
+	text-align: center;
+	height:inherit;
+	width:80%;
+	color:#000;
+	font-weight: bold;
+}
+#main {
+	margin-top: 15%;
+}
+h2#clientserving {
+	background-color:rgba(0,0,0,0.8);
+	font-size:120px;
+	line-height: 1em;
+	padding-bottom: 20px;
+	border-radius: 10px;
+}
+.btn1 {
+	width:80%;
+	font-size:20px;
+	font-family: 'RalewayLight', Arial;
+	text-transform: uppercase;
+	padding: 20px 0;
+	background-color: rgba(0,0,0,0.7);
+	background-image: none;
+}
+.btn2 {
+	width: 47%;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-family: 'RalewayLight', Arial;
+	line-height: 1em;
+	padding: 20px 0;
+	margin: 5px;
+}
+.ft {
+	font-size: 21px;
+	line-height: 1em;
+	padding: 10px 0;
+}
+.ft span {
+	font-weight:bold;
+}
+.modal {color:#434343;}
+#queue {
+	font-size: 35px;
+	line-height: 1em;
+	text-align: center;
+	height: inherit;
+}
+.queue.active {
+	
+}
+.blink {
+	
+	-webkit-animation-name: blink;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: cubig-bezier(1.0,0,1.0);
+	-webkit-animation-duration: 1s;
+	-moz-animation-name: blink;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: cubig-bezier(1.0,0,1.0);
+	-moz-animation-duration: 1s;
+}

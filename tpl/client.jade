@@ -1,0 +1,51 @@
+doctype html
+html(lang="en")
+	head
+		title= "PRQueue - Client"
+		link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap-responsive.min.css')
+		link(rel='stylesheet', href='/vendor/supersized/css/supersized.core.css')
+		link(rel='stylesheet', href='/main.css')
+	body
+		.container
+			.row
+				#main.span4.offset4.text-center
+					#cid-container
+						.prompt Enter Cashier #:
+						br
+						input#cid(type="text", name="cid", value="")
+						br
+						button#connect.btn.btn-inverse.btn1 Connect
+					#main2.hide
+						.prompt.text-left Now Serving:
+						h2#clientserving 302
+						button#next.btn.btn-large.btn-success.btn2(data-loading-text='Calling...', autocomplete='off') Next
+						button#again.btn.btn-large.btn2 Call Again
+		#foot
+			#announcements
+				.ft
+					.pull-left.hide
+						| Connected as: 
+						span Cashier 5
+					.pull-right
+						a(data-toggle='modal', href='#mymodal') OVERRIDE PRIORITY NUMBER
+					.clearfix
+		
+		#mymodal.modal.hide.fade(tabindex='-1', role='dialog')
+			.modal-header
+				h3#myModalLabel Set Starting Number
+			.modal-body.text-center
+				p Enter Priority Number:
+				input#queue(type='text', name='queue')
+				br
+				input#password(type='password', name='password', placeholder='Enter Admin Password')
+			.modal-footer
+				button.btn(data-dismiss='modal') Cancel
+				button#set.btn.btn-primary Set
+
+		script(src='/vendor/jquery.js')
+		script(src='/vendor/bootstrap/js/bootstrap.min.js')
+		//script(src='/vendor/bootstrap/js/button-min.js')
+		script(src='/vendor/supersized/js/supersized.core.3.2.1.min.js')
+		script(src='/socket.io/socket.io.js')
+		script(src='/vendor/client.js')

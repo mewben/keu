@@ -1,0 +1,66 @@
+doctype html
+html(lang="en")
+	head
+		title= "PRQueue - Server"
+		link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap-responsive.min.css')
+		link(rel='stylesheet', href='/vendor/supersized/css/supersized.core.css')
+		link(rel='stylesheet', href='/main.css')
+	body
+		.row-fluid
+			.span3
+				ul#servinglist
+					script#template(type='text/x-handlebars-template')
+						|{{#each this}}
+						|<li>
+						| 	<div class="default">
+						|	<div class="pull-left">
+						|		<div class="text-center">
+						|			Cashier <div class="no" id="cid{{id}}">{{id}}</div>
+						|		</div>
+						|	</div>
+						|	<div class="text-right queue" id="queue{{id}}">{{queue}}</div></div>
+						|</li>{{/each}}
+			.span9
+				.text-right
+					#date Tuesday, May 21, 2013
+					#time 2:24 PM
+				#video
+					video(autoplay='autoplay', loop='loop', controls='controls', muted='true')
+						source(src="/videos/1.mp4", type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+
+			//.span12
+				h1 BISU
+				.row-fluid
+					.span4
+						|Processing
+						h2 Now Serving
+						ul#servinglist
+					.span8
+						|Video
+						#ad
+						h1#nowserving
+						h3#clientno
+
+			#foot
+				#announcements
+					p.marquee
+						| 
+						//span(rel='')
+							| 
+				#logo
+					img(src='/bg/logo.png')
+
+			#alert.hide
+				| Calling 
+				span#nowserving 3129
+				| to Cashier
+				span#clientno 5
+
+		script(src='/vendor/jquery.js')
+		script(src='/vendor/bootstrap/js/bootstrap.min.js')
+		script(src='/vendor/supersized/js/supersized.core.3.2.1.min.js')
+		script(src='/vendor/jquery.marquee.min.js')
+		script(src='/socket.io/socket.io.js')
+		script(src='/vendor/bootstrap/js/handlebars.js')
+		script(src='/vendor/serverclient.js')
